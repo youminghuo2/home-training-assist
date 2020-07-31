@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EBFFF5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/left_back_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/data_time_tv"
+                android:src="@mipmap/left_back" />
+
+            <ImageView
+                android:id="@+id/right_back_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="65dp"
+                android:src="@mipmap/right_back" />
+
+            <TextView
+                android:id="@+id/data_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="45dp"
+                android:layout_toLeftOf="@+id/right_back_img"
+                android:fontFamily="@font/notosanscjkjp_bold"
+                android:gravity="center"
+                android:text="@string/test_data"
+                android:textColor="@color/button_color"
+                android:textSize="30sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/data_spinner"
+                style="@style/common_spinner"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:layout_toLeftOf="@+id/left_back_img"
+                android:background="@mipmap/spinner_background"
+                android:padding="10dp"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="157dp"
+                android:fontFamily="@font/notosanscjkjp_bold"
+                android:text="削除したい動画を選んでください"
+                android:textColor="@color/button_frame"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:scrollbars="vertical"-->
+<!--            android:scrollbarThumbVertical="@color/view_color"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="50dp"-->
+<!--            android:layout_toRightOf="@id/rel">-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="-5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="45dp"
+                    android:paddingRight="71dp"
+                    android:scrollbarSize="5dp"
+                    android:scrollbarThumbVertical="@drawable/scroller_bar"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="outsideOverlay" />
+
+                <RelativeLayout
+                android:id="@+id/empty_relayout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:visibility="gone"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/notosanscjkjp_regular"
+                    android:textSize="30sp"
+                    android:text="録画なし"/>
+            </RelativeLayout>
+            </RelativeLayout>
+<!--        </androidx.core.widget.NestedScrollView>-->
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ccebfff5">
+
+        <Button
+            android:id="@+id/btn_select_all"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32.5dp"
+            android:layout_marginRight="60dp"
+            android:layout_toLeftOf="@+id/btn_delete"
+            android:background="@drawable/button_select_all"
+            android:text="期間内を全選択"
+            android:textColor="#707070"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="130dp"
+            android:background="@drawable/button_send_counseling"
+            android:text="選択した動画を削除"
+            android:textColor="@color/textColor"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient_bar" />
+    </RelativeLayout>
+</RelativeLayout>
+

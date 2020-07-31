@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--        <item name="windowActionBar">false</item>-->
+        <!--        <item name="windowNoTitle">true</item>-->
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+
+    </style>
+
+
+    <style name="AppTheme.NoBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="common_spinner">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/button_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:dropDownListViewStyle">@style/spinnerListStyle</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+    <!--设置分割线-->
+    <style name="spinnerListStyle" parent="@android:style/Widget.ListView.DropDown">
+        <item name="android:divider">#fff</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:colorControlNormal">#B7D332</item>
+        <item name="android:colorControlActivated">#14A064</item>
+    </style>
+
+    <style name="TabTitleStyle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:scaleX">1.3</item>
+        <item name="android:scaleY">1.3</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="TabTitleStyleSmaller">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="Button_enable_style">
+        <item name="android:background">@drawable/button_bg_rounded_corners</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/button_color</item>
+    </style>
+
+    <style name="Button_disable_style">
+        <item name="android:background">@drawable/button_disable_bg_rounded_corners</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/button_disable_color</item>
+    </style>
+
+    <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="editTextColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:background">@color/button_color</item>
+    </style>
+
+</resources>

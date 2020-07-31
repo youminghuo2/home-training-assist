@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_body"
+    tools:context=".activity.IjkplayerPlay">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ijkPlayer_img"-->
+<!--        android:visibility="gone"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginBottom="80dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+<!--    android:id="@+id/ijkPlayer_frame"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp">
+
+        <com.example.hometrainng.customview.IjkplayerVideoView
+            android:layout_width="match_parent"
+            android:id="@+id/ijkPlayer_textureView"
+            android:layout_height="match_parent"/>
+<!--        <TextView-->
+<!--            android:id="@+id/time_data_tv"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="86sp"-->
+<!--            android:text="5"-->
+<!--            android:textColor="@color/button_color"-->
+<!--            android:background="@drawable/time_countdown_background"-->
+<!--            />-->
+    </FrameLayout>
+
+  <RelativeLayout
+      android:id="@+id/bottom_rel"
+      android:layout_above="@id/view"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="-45dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+          android:layout_marginLeft="58dp"
+          android:id="@+id/ijkPlayer_tv"
+          android:textSize="60sp"
+          android:text="00:00"
+          android:fontFamily="@font/notosanscjkjp_regular"
+          android:textColor="@color/button_color"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <SeekBar
+          android:id="@+id/ijkplayer_seekbar"
+          android:layout_toRightOf="@id/ijkPlayer_tv"
+          android:layout_marginLeft="50dp"
+          android:layout_width="720dp"
+          android:thumb="@null"
+          android:layout_centerVertical="true"
+          android:max="100"
+          android:progress="0"
+          android:layout_height="wrap_content"
+         android:progressDrawable="@drawable/seekbar_background" />
+
+
+  </RelativeLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_bar"/>
+
+</RelativeLayout>

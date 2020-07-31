@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="207dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="12dp"
+    android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="280dp"
+                android:layout_height="207dp">
+
+                <com.zyp.cardview.YcCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="13dp"
+                    app:ycCardBackgroundColor="@color/white"
+                    app:ycCardElevation="4dp"
+                    app:ycStartShadowColor="#B314A064">
+
+                <ImageView
+                    android:id="@+id/cardview_item_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_above="@+id/cardview_item_tv"
+                    android:scaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="105dp"
+                    android:alpha="0.6"
+                    android:background="@color/transparent">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="13dp"
+                        android:src="@mipmap/notification_fragment_player" />
+                </RelativeLayout>
+                    <TextView
+                        android:id="@+id/cardview_item_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/button_frame"
+                        android:textSize="@dimen/cardview_player_text_size" />
+                </com.zyp.cardview.YcCardView>
+                <ImageView
+                    android:id="@+id/watch_video_img"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:src="@mipmap/video_true"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+
+
+
+</LinearLayout>

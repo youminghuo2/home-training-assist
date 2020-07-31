@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="700dp"
+    android:layout_height="500dp"
+    android:background="@drawable/video_record_popup_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/video_record_tv_fir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:fontFamily="@font/notosanscjkjp_medium"
+        android:gravity="center_horizontal"
+        android:text="トレーニングを"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/video_record_tv_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_record_tv_fir"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosanscjkjp_medium"
+        android:text="録画をしてみませんか？"
+        android:gravity="center_horizontal"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="280dp"
+        android:background="@drawable/video_record_popup_button"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_record_tv_sec"
+        android:layout_marginTop="26dp"
+        android:layout_centerHorizontal="true"
+        android:text="OK"/>
+
+
+</RelativeLayout>

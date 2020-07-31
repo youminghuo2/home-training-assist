@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="thc" />
+    <version value="4" />
+    <list>
+        <mapping class="com.example.hometrainng.db.Goals" />
+        <mapping class="com.example.hometrainng.db.Issues" />
+        <mapping class="com.example.hometrainng.db.Messages" />
+        <mapping class="com.example.hometrainng.db.Notice" />
+        <mapping class="com.example.hometrainng.db.Video" />
+        <mapping class="com.example.hometrainng.db.VideoHistory"/>
+        <mapping class="com.example.hometrainng.db.Comments" />
+        <mapping class="com.example.hometrainng.db.TimeDate" />
+        <mapping class="com.example.hometrainng.db.Completion" />
+        <mapping class="com.example.hometrainng.db.RecordVideo" />
+        <mapping class="com.example.hometrainng.db.Therapist" />
+    </list>
+<!--    <storage value="homeTrainDate" />-->
+</litepal>

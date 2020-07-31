@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".activity.ui.tab3.NotificationsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="337dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_marginBottom="65dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lv_hua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="録画数"
+            android:layout_above="@id/record_progress"
+            android:layout_alignLeft="@id/record_progress"
+            android:textSize="18sp"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:textColor="@color/button_color"
+            android:layout_marginBottom="-5dp" />
+
+        <TextView
+            android:id="@+id/total_percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@id/record_progress"
+            android:layout_toRightOf="@id/lv_hua"
+            android:text="20/1000"
+            android:gravity="right"
+            android:layout_alignRight="@id/record_progress"
+            android:textColor="@color/button_color"/>
+
+        <ProgressBar
+            android:id="@+id/record_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="49dp"
+            android:layout_marginRight="48dp"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar_color" />
+
+        <TextView
+            android:id="@+id/image_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/record_title"
+            android:layout_marginTop="45dp"
+            android:lineSpacingExtra="10dp"
+            android:fontFamily="@font/notosanscjkjp_regular"
+            android:textColor="@color/button_frame"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="25dp"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:text="@string/record_text"
+            android:textColor="@color/button_color"
+            android:textSize="@dimen/record_title" />
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_body"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/rel">
+            <RelativeLayout
+                android:layout_marginTop="38dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/right_back_img"
+                android:layout_alignBottom="@id/right_back_img"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="75dp"
+                android:textSize="18sp"
+                android:textColor="@color/button_color"
+                android:background="@drawable/fragment_notifications_button_style"
+                android:text="@string/record_edit_button" />
+
+            <ImageView
+                android:id="@+id/right_back_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+               android:layout_toRightOf="@id/data_time_tv"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/right_back" />
+
+            <ImageView
+                android:id="@+id/left_back_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="52dp"
+                android:layout_toRightOf="@id/data_spinner"
+                android:src="@mipmap/left_back" />
+
+
+            <TextView
+                android:id="@+id/data_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@id/left_back_img"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="-23dp"
+                android:layout_marginRight="43dp"
+                android:fontFamily="@font/notosanscjkjp_bold"
+                android:textColor="@color/button_color"
+                android:textSize="30sp" />
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/data_spinner"
+                style="@style/common_spinner"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:background="@mipmap/spinner_background"
+                android:spinnerMode="dropdown"  />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_dashboard_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/data_time_tv"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="50dp"
+                android:paddingRight="71dp"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@drawable/scroller_bar"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/empty_relayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_below="@id/data_time_tv"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/notosanscjkjp_regular"
+                    android:textSize="30sp"
+                    android:text="録画なし"/>
+            </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+</RelativeLayout>

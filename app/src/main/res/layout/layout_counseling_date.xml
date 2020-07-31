@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="210dp"
+    android:layout_height="180dp">
+
+    <View
+        android:id="@+id/oblique_line"
+        android:layout_width="6dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/button_color"
+        android:rotation="45" />
+
+    <TextView
+        android:id="@+id/tab4_month_data_text"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/dinregular"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/button_color"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/tab4_day_data_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:text="12331"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/dinregular"
+        android:textColor="@color/button_color"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@id/tab4_week_data_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="90dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/notosanscjkjp_bold"
+        android:textColor="@color/button_color"
+        android:textSize="34sp" />
+</FrameLayout>

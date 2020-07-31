@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_body"
+    tools:context=".activity.MeetingActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="821dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="80dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp">
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/selfSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <Button
+        android:id="@+id/startMeetingBtn"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rules_button_background"
+        android:enabled="false"
+        android:fontFamily="@font/notosanscjkjp_medium"
+        android:text="@string/btn_meeting_start"
+        android:textColor="@color/button_color"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@drawable/gradient_bar"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

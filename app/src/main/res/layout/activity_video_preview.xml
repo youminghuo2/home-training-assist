@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VideoPreviewActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextureView
+            android:id="@+id/preview_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/convert_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="39dp"
+            android:layout_marginRight="36dp"
+            android:src="@mipmap/camera_convert" />
+
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/shadow_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="20dp"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:text="@string/preview_textview"/>
+
+
+            <Button
+                android:id="@+id/video_button"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/button_style"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:textSize="20sp"
+                android:textColor="#FF5A5A"
+                android:fontFamily="@font/notosanscjkjp_medium"
+                android:text="@string/preview_button"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_bar" />
+
+
+</RelativeLayout>

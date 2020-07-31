@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_cardview"
+    android:layout_width="267dp"
+    android:layout_height="195dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginTop="24dp">
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:outlineAmbientShadowColor="@color/cardview_shadow_color"-->
+<!--        android:outlineSpotShadowColor="@color/cardview_shadow_color"-->
+<!--        app:cardBackgroundColor="@color/color_body"-->
+<!--        app:cardCornerRadius="@dimen/cardView_radius"-->
+<!--        app:cardElevation="0dp">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zyp.cardview.YcCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ycCardElevation="4dp"
+                app:ycStartShadowColor="#B314A064">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="25dp">
+
+                <ImageView
+                    android:id="@+id/cardview_item_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="151dp"
+                    android:background="@color/colorBlack"
+                    android:layout_above="@+id/cardview_item_tv"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/times_clock" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="100dp"
+                    android:background="#B3FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/notification_player_img"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/notification_fragment_player" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_date"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginLeft="55dp"-->
+<!--                        android:textColor="@color/color_body2"-->
+<!--                        android:textSize="18sp" />-->
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="11dp"
+                        android:fontFamily="@font/notosanscjkjp_medium"
+                        android:text="2020.1.3"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/watch_video_img"-->
+<!--                    android:layout_width="26dp"-->
+<!--                    android:layout_height="26dp"-->
+<!--                    android:layout_gravity="right"-->
+<!--                    android:src="@mipmap/video_true"-->
+<!--                    android:visibility="invisible" />-->
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_gravity="bottom"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/cardview_item_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:fontFamily="@font/notosanscjkjp_medium"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/button_frame"
+                    android:textSize="@dimen/cardview_player_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_above"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rl_below" />
+
+            <RelativeLayout
+                android:id="@+id/rl_below"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:layout_alignParentBottom="true" />
+            </com.zyp.cardview.YcCardView>
+        </RelativeLayout>
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/video_edit_bg" />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activity.RulesActivity">
+
+    <include layout="@layout/toolbar_icon" />
+
+    <TextView
+        android:id="@+id/rules_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:fontFamily="@font/notosanscjkjp_bold"
+        android:text="@string/rules_title"
+        android:textColor="@color/colorTitle"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/rules_text"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:paddingTop="10dp"
+        android:layout_below="@id/rules_title"
+        android:fontFamily="@font/notosanscjkjp_regular"
+        android:lineSpacingExtra="10dp"
+        android:paddingStart="215dp"
+        android:paddingEnd="215dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scroller_bar"
+        android:scrollbars="vertical"
+        android:scrollbarSize="6dp"
+        android:text="@string/rules_text"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/rules_button"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="82dp"
+        android:background="@drawable/rules_button_background"
+        android:fontFamily="@font/notosanscjkjp_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/rules_button"
+        android:textColor="@color/button_color"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_bar" />
+
+</RelativeLayout>

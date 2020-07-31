@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+apply plugin: "org.sonarqube"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    ndkVersion "21.1.6352462"
+
+    defaultConfig {
+        applicationId "com.example.hometrainng"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 16
+        versionName "1.1.6"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.7'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'com.github.tamsiree.RxTool:RxKit:2.5.9'
+    implementation 'com.blankj:utilcode:1.27.5'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+//    //ijkplayer
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'org.litepal.android:java:3.0.0'
+
+    implementation 'org.webrtc:google-webrtc:1.0.28513'
+    implementation('io.socket:socket.io-client:0.8.3') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'com.github.michaelye.easydialog:easydialog:1.4'
+
+    implementation 'com.rabbitmq:amqp-client:4.3.0'
+
+//改变颜色
+    implementation 'com.zyp.cardview:cardview:1.0.1'
+
+}
+
+sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.projectKey", "thc-android"
+        property "sonar.projectName", "thc-android"
+        property "sonar.sources", "src/main/java" //源码，写这个就行
+        property "sonar.projectVersion", "1.0.0"  //版本，随意
+        property "sonar.binaries", "build/intermediates/classes"
+        property "sonar.host.url", "http://10.12.34.197:9002"
+        property "sonar.token", "688b8b25bd4563bede2ac2fb3614eceb1e25df4a"
+//        property "sonar.login", "admin"
+//        property "sonar.password", "admin"
+        property "sonar.profile", "Android Lint"
+    }
+}

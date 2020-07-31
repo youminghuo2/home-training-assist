@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/view_color"
+    android:background="@drawable/fragment_home_dialog_style">
+
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/aims_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/aims_icon" />
+
+                <TextView
+                    android:id="@+id/aims_title_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/aims_icon"
+                    android:text="@string/aims_title"
+                    android:textColor="@color/button_color" />
+
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/aims_title_id"
+                    android:background="@drawable/aims_title_background"
+                    android:gravity="center"
+                    android:text="@string/aims_title_circle"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/aims_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aims_view"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:paddingTop="5dp"
+                    />
+
+                <View
+                    android:id="@+id/aims_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/aims_icon"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/subject_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/subject_icon" />
+
+                <TextView
+                    android:id="@+id/subject_title_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/subject_icon"
+                    android:text="@string/subject_title"
+                    android:textColor="@color/button_color" />
+
+                <TextView
+                    android:id="@+id/subject_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/subject_view"
+                    android:layout_marginLeft="5dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="150dp" />
+
+                <View
+                    android:id="@+id/subject_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/subject_icon"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_color" />
+            </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

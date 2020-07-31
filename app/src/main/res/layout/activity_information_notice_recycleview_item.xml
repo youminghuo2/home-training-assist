@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_data"
+        android:layout_margin="10dp"
+        android:background="@drawable/information_detail_background"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:includeFontPadding="false"
+            android:textColor="@color/button_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/details_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/details_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:includeFontPadding="false"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/url_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_test"
+            android:textColor="@color/button_color"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/details_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosanscjkjp_medium"
+        android:includeFontPadding="false"
+        android:textColor="@color/button_color"
+        android:textSize="18sp" />
+</RelativeLayout>

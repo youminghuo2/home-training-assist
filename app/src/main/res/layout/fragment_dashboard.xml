@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".activity.ui.tab2.DashboardFragment">
+
+    <RelativeLayout
+        android:layout_width="337dp"
+        android:layout_marginTop="32dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/circle_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+            android:drawableLeft="@mipmap/circle_icon"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:gravity="center"
+            android:text="@string/circle_icon_text"
+            android:textColor="@color/button_color"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_round"
+            android:layout_width="146dp"
+            android:layout_height="146dp"
+            android:layout_below="@+id/circle_icon_tv"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp">
+
+            <com.example.hometrainng.customview.RoundProgressBar
+                android:id="@+id/roundProgressBar2"
+                android:layout_width="146dp"
+                android:layout_height="146dp"
+                android_custom:roundColor="@color/circle_round"
+                android_custom:roundProgressColor="#14A064"
+                android_custom:roundWidth="10dp"
+                android_custom:textColor="#14A064" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:text="40"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="69sp" />
+
+                <TextView
+                    android:id="@+id/tv_percent1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
+                    android:text="%"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="40sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="337dp"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@id/rl_round"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbarSize="6dp"
+            android:scrollbarThumbVertical="@drawable/scroller_bar"
+            android:scrollbars="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="100dp">
+
+                <ImageView
+                    android:id="@+id/round_imageview_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@drawable/round_imageview_grey_color"
+                    android:src="@mipmap/circle_text_icon" />
+
+                <TextView
+                    android:id="@+id/circle_icon_title_behind_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/round_imageview_icon"
+                    android:fontFamily="@font/notosanscjkjp_regular"
+                    android:text="@string/circle_icon_text_behind"
+                    android:textColor="@color/button_color"
+                    android:textSize="16sp" />
+
+
+
+                <TextView
+                    android:id="@+id/circle_icon_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/round_imageview_icon"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/notosanscjkjp_medium"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/button_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/circle_icon_data_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-18dp"
+                    android:layout_below="@id/circle_icon_title_tv"
+                    android:layout_marginLeft="50dp"
+                    android:fontFamily="@font/notosanscjkjp_regular"
+                    android:textColor="@color/button_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/circle_icon_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-14dp"
+                    android:layout_below="@id/circle_icon_data_tv"
+                    android:fontFamily="@font/notosanscjkjp_regular"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="20dp"
+                    android:lineSpacingExtra="10dp"
+                    android:textColor="@color/button_frame"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:background="@color/color_body"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/left_back_img"
+                android:layout_width="40dp"
+                android:layout_marginLeft="52dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/data_spinner"
+                android:src="@mipmap/left_back" />
+
+            <TextView
+                android:id="@+id/data_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/left_back_img"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-23dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="@font/notosanscjkjp_bold"
+                android:textColor="@color/button_color"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/right_back_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/data_time_tv"
+                android:src="@mipmap/right_back_img" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/data_spinner"
+                style="@style/common_spinner"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_dashboard_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="58dp"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@drawable/scroller_bar"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/data_time_tv"
+                android:layout_marginTop="68dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/empty_relayout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:visibility="gone"
+                android:layout_below="@id/data_time_tv"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/notosanscjkjp_regular"
+                    android:textSize="30sp"
+                    android:text="動画なし"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

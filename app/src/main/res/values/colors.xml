@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B7D332</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTitle">#14CE5B</color>
+    <color name="textColor">#14A064</color>
+    <color name="backgroundColor">#EBFFF5</color>
+    <color name="backgroundColor2">#EBFFF5FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="button_color">#14A064</color>
+    <color name="button_disable_color">#C5DBD1</color>
+    <color name="button_frame">#5A5A64</color>
+    <color name="linear_frame">#C5DBD1</color>
+    <color name="view_color">#B7D332</color>
+    <color name="line_color">#B7D332</color>
+    <color name="toolbar_view">#D2C3A0</color>
+    <color name="circle_round">#DBF2BA</color>
+    <color name="color_body">#EBFFF5</color>
+    <color name="color_body2">#5A5A64</color>
+    <color name="aims_background">#FF9D00</color>
+    <color name="cardview_shadow_color">#73C949</color>
+    <color name="center_color">#A1CC39</color>
+    <color name="grid_divider_gray">#8E8E8F</color>
+    <color name="grid_text_time">#1B1110</color>
+    <color name="transparent">#FFFFFFFF</color>
+
+    <color name="hint_color">#8003DAC5</color>
+    <color name="dark_color">#5A5A64</color>
+    <color name="yellow_text_color">#FF9D00</color>
+
+    <color name="cardView_shadowColor">#B314A064</color>
+
+
+</resources>

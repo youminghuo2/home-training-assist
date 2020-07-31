@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/tab4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="60dp"
+            android:layout_marginLeft="55dp"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:includeFontPadding="false"
+            android:text="@string/times_text"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.078" />
+
+        <include
+            android:id="@+id/current_user"
+            layout="@layout/activity_user_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/counseling_date"
+            layout="@layout/layout_counseling_date"
+            android:layout_width="210dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/current_user"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab4_time_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/dinregular"
+            android:gravity="center_vertical"
+            android:paddingLeft="35dp"
+            android:textColor="@color/button_color"
+            android:textSize="60sp"
+            app:layout_constraintStart_toEndOf="@id/counseling_date"
+            app:layout_constraintLeft_toLeftOf="@id/counseling_date"
+           app:layout_constraintTop_toBottomOf="@id/tab4_title"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/counseling_btn"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_send_counseling"
+            android:enabled="false"
+            android:fontFamily="@font/notosanscjkjp_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/button_color"
+            android:textSize="40sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/counseling_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjkjp_bold"
+            android:includeFontPadding="false"
+            android:layout_marginTop="80dp"
+            android:textColor="@color/button_color"
+            android:textSize="50sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/counseling_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:includeFontPadding="false"
+            android:text="@string/counseling_message"
+            android:textColor="@color/button_color"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/counseling_tv"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="1"
+        android:background="@color/color_body">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/Button_disable_style"
+                android:layout_width="350dp"
+                android:layout_height="280dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="25dp"
+                android:enabled="true"
+                android:fontFamily="@font/notosanscjkjp_bold"
+                android:gravity="center"
+                android:text="@string/counseling_button1"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="350dp"
+                android:layout_height="280dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/button_bg_rounded_corners"
+                android:fontFamily="@font/notosanscjkjp_bold"
+                android:gravity="center"
+                android:text="@string/counseling_room_btn"
+                android:textColor="@color/button_color"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

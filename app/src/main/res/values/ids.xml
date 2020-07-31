@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tab4_date" type="id" />
+    <item name="tab4_current_date_unit" type="id" />
+    <item name="counseling_room_date" type="id" />
+    <item name="tab5_button2" type="id" />
+    <item name="tab5_button3" type="id" />
+    <item name="tab5_button4" type="id" />
+    <item name="tab5_button6" type="id" />
+    <item name="tab5_button5" type="id" />
+    <item name="num1" type="id" />
+    <item name="avatarViewText" type="id" />
+    <item name="tab4_counseling_date" type="id" />
+    <item name="counseling_avatar_title" type="id" />
+    <item name="user_avatar_title" type="id" />
+    <item name="statute_content1" type="id" />
+    <item name="tab4_week_data_text" type="id" />
+</resources>

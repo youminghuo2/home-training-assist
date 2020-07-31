@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test" />
+    <!--    <com.example.hometrainng.customView.RoundProgressBar-->
+    <!--        android:id="@+id/roundProgressBar2"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginBottom="78dp"-->
+    <!--        android_custom:roundColor="#C1E56F"-->
+    <!--        android_custom:roundProgressColor="#14CE5B"-->
+    <!--        android_custom:textColor="#14A064"-->
+    <!--        android_custom:roundWidth="10dp"/>-->
+</RelativeLayout>

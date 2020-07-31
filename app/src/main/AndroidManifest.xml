@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hometrainng">
+
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/round_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="LockedOrientationActivity">
+        <activity android:name=".activity.HelpActivity" />
+        <activity
+            android:name=".activity.CounselingDateActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.NotificationDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.CommunicateActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activity.MeetingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.VideoRecordActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.aimsDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.VideoPreviewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.IjkplayerPlay"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.IjkplayerDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.StatuteActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.AttentionActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.CounselingCommentActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.CounselingRoomActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.InformationDoctorDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.InformationDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.MainHomeActivity"
+            android:label="@string/title_activity_main_home"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.RulesActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.CounselingGridActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.VideoEditActivity"
+            android:screenOrientation="landscape" />
+
+
+        <service
+            android:name=".service.RabbitMqService"
+            android:enabled="true">
+        </service>
+        <service
+            android:name=".service.RingToneService"
+            android:enabled="true" />
+
+        <receiver android:name=".service.AlarmBroadcastReceiver">
+
+        </receiver>
+        <receiver android:name=".receiver.ShutdownBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

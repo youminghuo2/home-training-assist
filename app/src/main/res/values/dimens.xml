@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!--    MainHome主页卡片的布局尺寸-->
+    <!--    圆角尺寸-->
+    <dimen name="cardView_radius">10dp</dimen>
+    <!--    text标题尺寸-->
+    <dimen name="cardview_information_textSize">12sp</dimen>
+    <dimen name="cardView_information_subtitle_textSize">15sp</dimen>
+    <dimen name="cardView_information_text_size">10sp</dimen>
+    <dimen name="cardview_information_padding_left">25dp</dimen>
+    <dimen name="cardview_information_padding_right">25dp</dimen>
+    <dimen name="cardview_information_padding_top">20dp</dimen>
+    <dimen name="cardview_information_padding_bottom">20dp</dimen>
+    <dimen name="cardview_information_time">8sp</dimen>
+
+    <dimen name="cardview_player_text_size">14sp</dimen>
+
+
+    <!--    第二个homeFragment页面-->
+    <!--    circle图片上方的文字大小-->
+    <dimen name="circle_text">15sp</dimen>
+
+    <!--    第三个Fragment页面-->
+    <dimen name="record_title">20sp</dimen>
+
+
+    <!--    标题title-->
+    <dimen name="title_size">20sp</dimen>
+    <!--    标题下面黑色文字，播放视频标题大小-->
+    <dimen name="second_title_size">11sp</dimen>
+    <dimen name="dividerSize">1dp</dimen>
+
+</resources>

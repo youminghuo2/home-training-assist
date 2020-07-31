@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_dialog_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/seek_relativelayout"
+        android:layout_width="720dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ijkplayer_video"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="84dp"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/ijkplayer_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_marginTop="-5dp"
+            android:progressDrawable="@drawable/seekbar_background"
+            android:thumb="@null" />
+
+        <TextView
+            android:id="@+id/ijkPlayerTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ijkplayer_seekbar"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/notosanscjkjp_demilight"
+            android:text="00:00"
+            android:textColor="@color/button_color"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/duration_tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ijkplayer_seekbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/notosanscjkjp_demilight"
+            android:text="03:00"
+            android:textColor="@color/button_color"
+            android:textSize="26dp" />
+
+        <TextView
+            android:id="@+id/ijkPlayerTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ijkplayer_seekbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-60dp"
+            android:fontFamily="@font/notosanscjkjp_regular"
+            android:text="00:00"
+            android:textColor="@color/button_color"
+            android:textSize="80sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-20dp"
+        android:text="お尻での前後への体重移動(共通5回)"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosanscjkjp_regular"
+        android:text="2020.4.4"
+        android:textColor="@color/button_color"
+        android:textSize="24sp" />
+
+
+    <com.example.hometrainng.customview.IjkplayerVideoViewRecord
+        android:id="@+id/ijkplayer_video"
+        android:layout_width="570dp"
+        android:layout_height="406dp"
+        android:layout_below="@id/title_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="84dp" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/dialog_close" />
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activity.LoginActivity">
+
+    <include layout="@layout/toolbar_icon" />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/notosanscjkjp_bold"
+        android:text="@string/login_title"
+        android:textColor="@color/colorTitle"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/login_title"
+        android:layout_marginLeft="240dp"
+        android:layout_marginRight="240dp"
+        android:layout_marginTop="15dp"
+        android:elevation="3dp"
+        android:background="@drawable/login_linearlayout_background"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginRight="140dp"
+            android:background="@drawable/button_background"
+            android:gravity="center_vertical"
+            android:hint="@string/login_id_hint"
+            android:textColorHint="@color/button_color"
+            android:inputType="text"
+            android:nextFocusForward="@id/login_nickName"
+            android:paddingLeft="20dp"
+            android:textColor="@color/button_color"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/login_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/login_id"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="140dp"
+            android:maxLength="30"
+            android:textColorHint="@color/button_color"
+            android:background="@drawable/button_background"
+            android:gravity="center_vertical"
+            android:hint="@string/login_nickName_hint"
+            android:inputType="text"
+            android:nextFocusForward="@id/rules_button"
+            android:paddingLeft="20dp"
+            android:textColor="@color/button_color"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/rules_button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="224dp"
+            android:layout_marginRight="224dp"
+            android:layout_marginBottom="82dp"
+            android:background="@drawable/rules_button_background"
+            android:fontFamily="@font/notosanscjkjp_medium"
+            android:text="OK"
+            android:textColor="@color/button_color"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_bar" />
+</RelativeLayout>
